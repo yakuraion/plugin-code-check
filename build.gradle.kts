@@ -3,7 +3,7 @@ plugins {
     `maven-publish`
 }
 
-group = "pro.yakuraion.plugins.code-check"
+group = "pro.yakuraion.plugins.codecheck"
 version = "1.0-SNAPSHOT"
 
 java {
