@@ -15,3 +15,9 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "code-check"
+
+includeBuild("plugin-utils") {
+    dependencySubstitution {
+        substitute(module("pro.yakuraion.plugins.utils:utils")).using(project(":"))
+    }
+}

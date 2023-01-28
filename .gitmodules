@@ -1,0 +1,3 @@
+[submodule "plugin-utils"]
+	path = plugin-utils
+	url = https://github.com/yakuraion/plugin-utils.git
