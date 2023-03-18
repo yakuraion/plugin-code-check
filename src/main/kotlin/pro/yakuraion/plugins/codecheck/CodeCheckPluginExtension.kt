@@ -6,13 +6,6 @@ import org.gradle.api.tasks.Nested
 
 interface CodeCheckPluginExtension {
 
-    interface DetektConfiguration {
-
-        val enabled: Property<Boolean>
-
-        val config: ConfigurableFileCollection
-    }
-
     val jvmTarget: Property<String>
 
     @get:Nested
@@ -20,5 +13,12 @@ interface CodeCheckPluginExtension {
 
     fun detekt(action: DetektConfiguration.() -> Unit) {
         action.invoke(detekt)
+    }
+
+    interface DetektConfiguration {
+
+        val enabled: Property<Boolean>
+
+        val config: ConfigurableFileCollection
     }
 }
