@@ -22,7 +22,7 @@ class CodeCheckPlugin : Plugin<Project> {
         }
 
         target.extensions.configure<DetektExtension> {
-            buildUponDefaultConfig = true
+            buildUponDefaultConfig = false
             config = extension.detekt.config
         }
 
