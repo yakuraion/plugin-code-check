@@ -41,7 +41,7 @@ class CodeCheckPlugin : Plugin<Project> {
 
         target.tasks.register(OPEN_REPORT_TASK) {
             val detektTask = target.tasks.withType<Detekt>().first()
-            onlyIf { detektTask.state.failure != null }
+            onlyIf { extension.openFailedReport.get() && detektTask.state.failure != null }
             doLast {
                 val report = detektTask.reports.html.outputLocation.asFile.get()
                 target.openFileByOS(report)

@@ -8,6 +8,8 @@ interface CodeCheckPluginExtension {
 
     val jvmTarget: Property<String>
 
+    val openFailedReport: Property<Boolean>
+
     @get:Nested
     val detekt: DetektConfiguration
 
