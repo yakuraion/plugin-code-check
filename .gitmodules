@@ -1,3 +1,4 @@
 [submodule "plugin-utils"]
 	path = plugin-utils
 	url = git@github.com:yakuraion/plugin-utils.git
+	branch = master
